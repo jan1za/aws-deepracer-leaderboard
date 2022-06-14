@@ -1,0 +1,82 @@
+@import '~@angular/material/theming';
+
+.entry{
+  border-radius: 15px;
+  padding: 4px;
+  margin: 5px;
+  width: 95%;
+  height: 70px; 
+  color: white;
+  background-image: linear-gradient(to right, #4ea7f6,#298ae0, #eb0cf3);
+  font-size: 3em;
+}
+
+.gold {
+  border-radius: 15px;
+  padding: 4px;
+  margin: 5px;
+  width: 95%;
+  height: 100px; 
+  color: white;
+  font-size: 3.5em;
+  background-image: linear-gradient(to right, #ffc906,#fac533, #deae00);
+}
+
+.silver {
+  border-radius: 15px;
+  padding: 4px;
+  margin: 5px;
+  width: 95%;
+  height: 90px; 
+  font-size: 3.5em;
+  color: rgb(57, 57, 57);
+  background-image: linear-gradient(to right, #f0f0f0,#eceef0, #a7a7a7);
+}
+
+.bronze {
+  border-radius: 15px;
+  padding: 4px;
+  margin: 5px;
+  width: 95%;
+  height: 80px; 
+  font-size: 3.5em;
+  color:white;
+  background-image: linear-gradient(to right, #ba9355,#ad4704, #c28e39);
+}
+
+.l-time {
+  font-family: 'Roboto';
+  font-size: 0.9em;
+  padding-right: 15px;
+  font-weight: 800;
+}
+
+.l-name {
+  font-family: 'Racing Sans One', cursive;
+}
+
+.l-team {
+  font-family: 'Racing Sans One', cursive;
+  font-size: 0.8em;
+}
+
+.l-pos {
+  font-family: 'Racing Sans One', cursive;
+  font-size: 0.9em;
+}
+
+.embossed{
+  color: #f0f0f0;
+  font-size: 2em;
+  font-family: Futura;
+  background-color: #666666;
+  text-shadow: 1px 4px 4px #555;
+  text-align: center;
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+
+}
+
+.logo {
+  height: 120px;
+}

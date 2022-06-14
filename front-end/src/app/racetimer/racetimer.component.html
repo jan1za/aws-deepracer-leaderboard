@@ -1,0 +1,39 @@
+
+<div fxLayout="column" style="height:100%; font-size: 1.5em; line-height: 1.5em; background-color: white;">
+    <div fxLayout="row" fxFlex="5" style="margin:20px; background-color: #303030">
+        <mat-select [(ngModel)]="racerSelected" (ngModelChange)="updateBestTime($event)">
+            <mat-option *ngFor="let racer of racers" [value]="racer">
+            {{racer.name}}
+            </mat-option>
+        </mat-select>
+    </div>
+    <div fxLayout="row" fxFlex="75" style="margin:20px">
+        <div fxFlex="50">
+            <div>
+                Racer Name: {{getRacerName()}}
+            </div>
+            <div>Best Time: {{getBestTime()}}</div>
+            <div style="font-size:4em; margin-top:30px">{{getTime()}}</div>
+            <div style="font-size:2em; margin-top:30px; color:blue;">{{getTotalTime()}}</div>
+        </div>
+        <div fxFlex="50">
+            <div>Current Timing:</div>
+            <div fxLayout="row" *ngFor="let lap of laptimes; index as i">
+                <div fxFlex="5">#{{i+1}}</div>
+                <div fxFlex="95" class="l-time" fxLayoutAlign="end center">{{lap.time}}</div>
+                <div>
+                    <button mat-icon-button color="primary" (click)="onDeleteRec(i)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div fxLayout="row" fxFlex="20" fxLayoutAlign="space-around center">
+        <button class="race-buttons" mat-raised-button color="warn" (click)="onClear()" [disabled]="racerSelected == undefined" >Reset Race</button>
+        <button class="race-buttons" mat-raised-button color="warn" (click)="onResetTimer()" [disabled]="racerSelected == undefined" >Timer to Zero</button>
+        <button class="race-buttons" mat-raised-button color="primary" (click)="onStart()" [disabled]="racerSelected == undefined">{{startText}}</button>
+        <button class="race-buttons" mat-raised-button color="accent" (click)="onComplete()" [disabled]="racerSelected == undefined">Lap Completed</button>
+        <button class="race-buttons" mat-raised-button color="warn" (click)="onSave()" [disabled]="racerSelected == undefined">Submit Best Time <br> {{getBestTime()}} </button>
+    </div>
+</div>

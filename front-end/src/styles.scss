@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Angular Material Theming
+@import '~@angular/material/theming';
+@include mat-core();
+
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+html, body { height: 100%; }
+body { margin: 0; 
+    font-family: Roboto, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica,
+    Arial, 'Lucida Grande', sans-serif; 
+    background: #353535;
+}
+
+head {
+    display: none;
+}

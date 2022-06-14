@@ -1,0 +1,31 @@
+<div fxLayout="column" fxLayoutAlign="space-around center">
+
+<div fxLayout="row" style="width:100%; padding-left: 50px; padding-right: 50px;padding-bottom: 20px; padding-top: 8px;">
+    <div fxFlex="33" class="logo" fxLayoutAlign="start center"><img  src="assets/img/deepracer-logo-250.png"
+        height="120"></div>
+    <div fxFlex="33" class="logo" fxLayoutAlign="center center"><img  src="assets/img/aws-logo.png"
+        height="70"></div>
+    <div fxFlex="33" class="logo" fxLayoutAlign="end center">
+        <!-- <img  src="assets/img/[Your logo].png" height="120"> -->
+    </div>
+</div>
+
+<div class="mat-elevation-z10 " 
+     [ngClass]="{'entry' : i >= 3, 'gold' : i == 0, 'silver' : i == 1, 'bronze' : i == 2}" 
+     fxLayout="row" *ngFor="let leader of leaders; index as i">
+
+     <div *ngIf="i == 0" fxFlex="6" class="l-pos" fxLayoutAlign="center center">
+        <div class="logo-win"><img  src="assets/img/1.png" height="50"></div>
+     </div>
+     <div *ngIf="i == 1" fxFlex="6" class="l-pos" fxLayoutAlign="center center">
+        <div class="logo-win"><img  src="assets/img/2.png" height="50"></div>
+     </div>
+     <div *ngIf="i == 2" fxFlex="6" class="l-pos" fxLayoutAlign="center center">
+        <div class="logo-win"><img  src="assets/img/3.png" height="50"></div>
+     </div>
+     <div *ngIf="i > 2" fxFlex="6" class="l-pos" fxLayoutAlign="center center">#{{i+1}}</div>
+     <div fxFlex="auto" class="l-name" fxLayoutAlign="start center">{{leader.name}}</div>
+     <div fxFlex="15" class="l-team" fxLayoutAlign="center center">[{{leader.team}}]</div>
+     <div fxFlex="30" class="l-time" fxLayoutAlign="end center">{{leader.time}}</div>
+</div>
+</div>
